@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Menu</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/service.css" />
+    <link rel="stylesheet" href="/src/css/date.css" />
+    <link rel="stylesheet" href="/src/css/confirmation.css" />
+    <script src="/src/js/index.js" defer></script>
+    <script src="/src/js/service.js" defer></script>
+    <script src="/src/js/date.js" defer></script>
+    <script src="/src/js/confirmation.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar" id="sidebar">
+        <a href="#" id="link-staff" class="disabled">
+          <div class="item-text-icon">
+            <div class="item-icon">
+              <span class="number">1</span>
+              <span class="icon-check"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </span>
+            </div>
+            <span>Staff</span>
+          </div>
+        </a>
+        <a href="#" id="link-service">
+          <div class="item-text-icon">
+            <div class="item-icon">
+              <span class="number-2">2</span>
+              <span class="icon-check-2"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </span>
+            </div>
+            <span>Service</span>
+          </div>
+        </a>
+        <a href="#" id="link-date">
+          <div class="item-text-icon">
+            <div class="item-icon">
+              <span class="number-3">3</span>
+              <span class="icon-check-3"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </span>
+            </div>
+            <span> Data & time</span>
+          </div>
+        </a>
+        <a href="#" id="link-confirmation">
+          <div class="item-text-icon">
+            <div class="item-icon">
+              <span class="number-4">4</span>
+              <span class="icon-check-4"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </span>
+            </div>
+            <span> Confirmation</span>
+          </div></a
+        >
+      </div>
+
+      <div id="container-staff">
+        <div class="heading-container">
+          <h2 class="heading-staff">Select staff</h2>
+        </div>
+        <div class="content"></div>
+        <div class="buttons">
+          <div class="buttons-container-staff">
+            <button id="confirm-button-staff" class="confirm-button">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="service-container">
+        <div class="heading-container">
+          <h2 class="heading-staff">Select service</h2>
+        </div>
+        <div id="content-service"></div>
+        <div class="buttons">
+          <div class="buttons-container">
+            <button id="back-button-to-staff" class="back-button">Back</button>
+            <button id="confirm-button-service" class="confirm-button">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="content-data">
+        <div class="heading-date-container">
+          <h2 class="heading-date">Select date & time</h2>
+        </div>
+        <div class="content-data-container">
+          <div class="select-calendar">
+            <div id="calendar"></div>
+          </div>
+          <div class="select-day">
+            <p class="text">Time</p>
+            <div id="selected-day-info">Selected day</div>
+          </div>
+        </div>
+        <div class="buttons">
+          <div class="buttons-container">
+            <button id="back-button-to-service" class="back-button">
+              Back
+            </button>
+            <button id="confirm-button-date" class="confirm-button">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="confirmation">
+        <div class="confirmation-container">
+          <div class="confirmation-heading">
+            <h4>Confirm details</h4>
+          </div>
+          <form>
+            <div class="elements">
+              <div class="elements-item">
+                <label>First Name</label>
+                <input type="text" name="first-name" id="name" />
+              </div>
+              <div class="elements-item">
+                <label>Last Name</label>
+                <input type="text" name="last-name" id="lastname" />
+              </div>
+            </div>
+            <div class="elements">
+              <div class="elements-item">
+                <label>E-mail</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div class="elements-item">
+                <label>Phone</label>
+                <input type="number" name="phone" id="phone" />
+              </div>
+            </div>
+          </form>
+          <div id="result-block">
+            <p id="customer-info"></p>
+          </div>
+          <div id="confirm-message"></div>
+          <div class="select-info">
+            <div id="staff-name"></div>
+          </div>
+          <div class="buttons">
+            <div class="buttons-container">
+              <button id="back-button-to-date" class="back-button">Back</button>
+              <button
+                type="submit"
+                id="confirm-button-finish"
+                class="confirm-button"
+              >
+                Confirm Booking
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
