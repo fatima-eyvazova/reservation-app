@@ -25,10 +25,6 @@ body {
   text-decoration: none;
 }
 
-.sidebar a:hover {
-  background-color: #555;
-}
-
 table {
   width: 500px;
   height: 370px;
@@ -184,6 +180,10 @@ th {
   background-color: #53d56c;
   color: white;
 }
+.sidebar a:hover .item-text-icon .icon-check-3 svg {
+  color: white;
+}
+
 .sidebar a:hover .item-text-icon span {
   color: #53d56c;
 }

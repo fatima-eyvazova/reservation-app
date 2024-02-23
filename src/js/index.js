@@ -51,9 +51,10 @@ const constructResBlock = () => {
   const foundService = services.find((s) => s.id === stateObject?.service_id);
   const dateTime = stateObject?.date + " / " + stateObject?.time;
 
-  let inner = `<p>Staff - ${foundStaff?.name}</p>`;
-  inner += `<p>Service - ${foundService?.name} ${foundService?.price}$</p>`;
-  inner += `<p>${dateTime}</p>`;
+  let inner = `<p><span class="text-info">Staff :</span><span class="info-item"> ${foundStaff?.name}</span></p>`;
+  inner += `<p><span class="text-info">Service :</span> <span class="info-item"> ${foundService?.name} ${foundService?.price}</span></p>`;
+  inner += `<p><span class="text-info">Date : </span> <span class="info-item">${dateTime}</span></p>`;
+  inner += `<p><span class="text-info">Total :</span> <span class="info-item-price"> ${foundService?.price}$</span></p>`;
 
   resBlock.innerHTML = inner;
 };

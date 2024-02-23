@@ -21,7 +21,8 @@ body {
   display: block;
   color: white;
   text-decoration: none;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
+  padding-bottom: 10px;
 }
 
 .sidebar a:hover .item-text-icon .item-icon span {
@@ -46,6 +47,7 @@ body {
   gap: 10px;
   height: 16px;
 }
+
 .disabled {
   pointer-events: none;
   color: gray;

@@ -53,10 +53,6 @@ body {
   background-color: #4d545a;
 }
 
-.sidebar a:hover {
-  background-color: #555;
-}
-
 #service-container {
   background-color: #f5f7fa;
   /* width: 80vw; */
@@ -66,7 +62,7 @@ body {
   /* padding: 20px; */
 }
 #content-service {
-  padding-bottom: 93px;
+  padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
