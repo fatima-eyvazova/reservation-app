@@ -11,6 +11,7 @@ let selectedDateElement = null;
 let selectedTimeElement = null;
 
 const backButtonToService = document.getElementById("back-button-to-service");
+const dataLink = document.getElementById("link-date");
 const nextBtn = document.querySelector("#confirm-button-date");
 const numberElement = document.querySelector(".number-3");
 const iconCheckElement = document.querySelector(".icon-check-3");
@@ -25,6 +26,8 @@ nextBtn.addEventListener("click", () => {
   confirmationContainer.style.display = "flex";
   numberElement.style.display = "none";
   iconCheckElement.style.opacity = "1";
+  dataLink.style.pointerEvents = "none";
+
   constructResBlock();
 });
 

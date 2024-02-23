@@ -23,6 +23,8 @@ const services = [
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
+  const linkService = document.getElementById("link-service");
+
   contentDataContainer.style.display = "none";
   confirmationContainer.style.display = "none";
 
@@ -105,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
       contentDataContainer.style.display = "flex";
       number.style.display = "none";
       iconCheck.style.opacity = "1";
+      linkService.style.pointerEvents = "none";
     }
   });
 });

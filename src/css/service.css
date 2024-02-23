@@ -15,7 +15,8 @@ body {
   height: 100vh;
   padding-top: 20px;
 }
-
+.disabled-link {
+}
 .sidebar a {
   padding: 10px;
   margin-bottom: 10px;
@@ -55,11 +56,9 @@ body {
 
 #service-container {
   background-color: #f5f7fa;
-  /* width: 80vw; */
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* padding: 20px; */
 }
 #content-service {
   padding-bottom: 80px;

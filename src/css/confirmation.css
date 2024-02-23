@@ -143,7 +143,7 @@ body {
 
 .modal-content .message {
   padding: 20px;
-  font-size: 21px;
+  font-size: 18px;
   color: #53d56c;
 }
 .confirmation-container {
@@ -193,6 +193,7 @@ body {
 form .form-elements {
   display: flex;
   padding-left: 10px;
+  margin-left: 20px;
   width: 75vw;
 }
 

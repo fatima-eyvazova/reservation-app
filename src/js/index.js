@@ -59,7 +59,12 @@ const constructResBlock = () => {
   resBlock.innerHTML = inner;
 };
 
+let nextButtonClicked = false;
+
 linkStaff.addEventListener("click", () => {
+  if (!nextButtonClicked) {
+    return;
+  }
   containerStaff.style.display = "flex";
   serviceContainer.style.display = "none";
   contentDataContainer.style.display = "none";
@@ -67,6 +72,9 @@ linkStaff.addEventListener("click", () => {
 });
 
 linkService.addEventListener("click", () => {
+  if (!nextButtonClicked) {
+    return;
+  }
   containerStaff.style.display = "none";
   serviceContainer.style.display = "flex";
   contentDataContainer.style.display = "none";
@@ -74,6 +82,9 @@ linkService.addEventListener("click", () => {
 });
 
 linkDate.addEventListener("click", () => {
+  if (!nextButtonClicked) {
+    return;
+  }
   containerStaff.style.display = "none";
   serviceContainer.style.display = "none";
   contentDataContainer.style.display = "flex";
@@ -81,6 +92,9 @@ linkDate.addEventListener("click", () => {
 });
 
 linkConfirmation.addEventListener("click", () => {
+  if (!nextButtonClicked) {
+    return;
+  }
   containerStaff.style.display = "none";
   serviceContainer.style.display = "none";
   contentDataContainer.style.display = "none";
@@ -96,6 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const contentDiv = document.querySelector(".content");
   const confirmButton = document.getElementById("confirm-button-staff");
   let nextButtonClicked = false;
+
+  const disabledLinks = document.querySelectorAll(".disabled-link");
 
   staffs.forEach((staff) => {
     const staffDiv = document.createElement("div");
@@ -153,14 +169,6 @@ document.addEventListener("DOMContentLoaded", function () {
       serviceContainer.style.display = "flex";
       number.style.display = "none";
       iconCheck.style.opacity = "1";
-      nextButtonClicked = true;
-    }
-  });
-  linkStaff.addEventListener("click", function (event) {
-    if (!nextButtonClicked) {
-      event.preventDefault();
-      linkStaff.removeAttribute("href");
-      linkStaff.classList.add("disabled");
     }
   });
 });
